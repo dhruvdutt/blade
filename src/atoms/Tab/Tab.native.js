@@ -7,6 +7,8 @@ import Text from '../Text';
 import { getColor } from '../../_helpers/theme';
 import Icon from '../Icon';
 import Space from '../Space';
+import icons from '../../icons';
+import automation from '../../_helpers/automation-attributes';
 
 const styles = {
   label: {
@@ -59,7 +61,7 @@ const getLabelColor = ({ isActive, disabled }) => {
   return color;
 };
 
-const Tab = ({ label, isActive, onPress, disabled }) => {
+const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
   const initialLabelColor = getLabelColor({ isActive, disabled });
 
   const [tabBackground, setTabBackground] = useState('transparent');
@@ -82,8 +84,10 @@ const Tab = ({ label, isActive, onPress, disabled }) => {
     setLabelColor(color);
     setTabBackground('transparent');
   };
+
+  const isValidIcon = icons[icon];
   return (
-    <Flex flex={1} flexDirection="row" justifyContent="center">
+    <Flex flex={1} justifyContent="center">
       <StyledTabButton
         activeOpacity={1}
         disabled={disabled}
@@ -91,13 +95,14 @@ const Tab = ({ label, isActive, onPress, disabled }) => {
         onPressIn={onPressIn}
         onPressOut={onPressOut}
         backgroundColor={tabBackground}
+        {...automation(testID)}
       >
-        <Flex alignItems="center" flexDirection="row">
+        <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
           <Label isActive={isActive} disabled={disabled}>
-            <Icon name="info" fill={labelColor} size="small" />
+            {isValidIcon && <Icon name="info" fill={labelColor} size="small" />}
             <Space margin={styles.label.margin()}>
               <View>
-                <Text color={labelColor} disabled={disabled} size="medium">
+                <Text color={labelColor} disabled={disabled} numberOfLines={1} size="medium">
                   {label}
                 </Text>
               </View>
@@ -114,12 +119,15 @@ Tab.propTypes = {
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
+  icon: PropTypes.string,
+  testID: PropTypes.string,
 };
 
 Tab.defaultProps = {
   isActive: false,
   onPress: () => {},
   disabled: false,
+  testID: 'ds-tab',
 };
 
 export default Tab;
