@@ -6,6 +6,7 @@ import Flex from '../Flex';
 import Text from '../Text';
 import { getColor } from '../../_helpers/theme';
 import Icon from '../Icon';
+import Space from '../Space';
 
 const styles = {
   label: {
@@ -26,6 +27,9 @@ const styles = {
       }
       return 'transparent';
     },
+    margin() {
+      return [0, 0, 0, 0.5];
+    },
   },
 };
 
@@ -33,7 +37,8 @@ const StyledTabButton = styled(TouchableOpacity)(
   (props) => `
 min-width: 48px;
 background-color: ${props.backgroundColor};
-border-radius: 2px;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
 `,
 );
 
@@ -73,7 +78,8 @@ const Tab = ({ label, isActive, onPress, disabled }) => {
   };
 
   const onPressOut = () => {
-    setLabelColor(getLabelColor({ isActive, disabled }));
+    const color = getLabelColor({ isActive, disabled });
+    setLabelColor(color);
     setTabBackground('transparent');
   };
   return (
@@ -89,11 +95,13 @@ const Tab = ({ label, isActive, onPress, disabled }) => {
         <Flex alignItems="center" flexDirection="row">
           <Label isActive={isActive} disabled={disabled}>
             <Icon name="info" fill={labelColor} size="small" />
-            <View>
-              <Text color={labelColor} disabled={disabled} size="medium">
-                {label}
-              </Text>
-            </View>
+            <Space margin={styles.label.margin()}>
+              <View>
+                <Text color={labelColor} disabled={disabled} size="medium">
+                  {label}
+                </Text>
+              </View>
+            </Space>
           </Label>
         </Flex>
       </StyledTabButton>
@@ -106,6 +114,12 @@ Tab.propTypes = {
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
+};
+
+Tab.defaultProps = {
+  isActive: false,
+  onPress: () => {},
+  disabled: false,
 };
 
 export default Tab;
