@@ -99,7 +99,7 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
       >
         <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
           <Label isActive={isActive} disabled={disabled}>
-            {isValidIcon && <Icon name="info" fill={labelColor} size="small" />}
+            {isValidIcon && <Icon name={icon} fill={labelColor} size="small" />}
             <Space margin={styles.label.margin()}>
               <View>
                 <Text color={labelColor} disabled={disabled} numberOfLines={1} size="medium">
