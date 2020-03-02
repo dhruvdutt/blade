@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
@@ -74,13 +74,13 @@ const Label = styled(View)`
 const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
   const [isPressed, setTabPressed] = useState(false);
 
-  const onPressIn = () => {
+  const onPressIn = useCallback(() => {
     setTabPressed(true);
-  };
+  }, []);
 
-  const onPressOut = () => {
+  const onPressOut = useCallback(() => {
     setTabPressed(false);
-  };
+  }, []);
 
   const isValidIcon = icons[icon];
 
