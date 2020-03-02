@@ -12,9 +12,10 @@ exports[`<Tab /> selected selected tab should call onPress method when press eve
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -209,9 +210,10 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -406,13 +408,14 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="rgba(243, 248, 254, 1.0)"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={true}
     style={
       Array [
         Object {
-          "backgroundColor": "rgba(243, 248, 254, 1.0)",
+          "backgroundColor": "rgba(11, 112, 231, 0.05)",
           "borderTopLeftRadius": 2,
           "borderTopRightRadius": 2,
           "minWidth": 48,
@@ -603,9 +606,10 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -800,9 +804,10 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -997,9 +1002,10 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -1194,9 +1200,10 @@ exports[`<Tab /> selected selected tab should match snapshot when disabled, with
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={true}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -1216,7 +1223,7 @@ exports[`<Tab /> selected selected tab should match snapshot when disabled, with
       style={
         Array [
           Object {
-            "borderBottomColor": "rgba(231, 241, 253, 1.0)",
+            "borderBottomColor": "rgba(11, 112, 231, 0.10)",
             "borderBottomWidth": 1,
             "paddingBottom": 8,
             "paddingLeft": 0,
@@ -1391,9 +1398,10 @@ exports[`<Tab /> selected selected tab should match snapshot when valid icon nam
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -1588,9 +1596,10 @@ exports[`<Tab /> selected selected tab should render tab when active 1`] = `
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={true}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -1663,7 +1672,7 @@ exports[`<Tab /> selected selected tab should render tab when active 1`] = `
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should call onPress method when press event is fired on tab 1`] = `
+exports[`<Tab /> unselected tab should call onPress method when press event is fired on tab 1`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -1675,9 +1684,10 @@ exports[`<Tab /> un selected selected tab should call onPress method when press 
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -1860,7 +1870,7 @@ exports[`<Tab /> un selected selected tab should call onPress method when press 
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot for user taps on tab button 1`] = `
+exports[`<Tab /> unselected tab should match snapshot for user taps on tab button 1`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -1872,9 +1882,10 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -2057,7 +2068,7 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot for user taps on tab button 2`] = `
+exports[`<Tab /> unselected tab should match snapshot for user taps on tab button 2`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -2069,9 +2080,10 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="rgba(224, 228, 249, 0.24)"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={true}
     style={
       Array [
         Object {
@@ -2254,7 +2266,7 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot for user taps on tab button 3`] = `
+exports[`<Tab /> unselected tab should match snapshot for user taps on tab button 3`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -2266,9 +2278,10 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -2451,7 +2464,7 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot for user taps on tab button 4`] = `
+exports[`<Tab /> unselected tab should match snapshot for user taps on tab button 4`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -2463,9 +2476,10 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -2648,7 +2662,7 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot for user taps on tab button 5`] = `
+exports[`<Tab /> unselected tab should match snapshot for user taps on tab button 5`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -2660,9 +2674,10 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -2845,7 +2860,7 @@ exports[`<Tab /> un selected selected tab should match snapshot for user taps on
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot when disabled, with icon present 1`] = `
+exports[`<Tab /> unselected tab should match snapshot when disabled, with icon present 1`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -2857,9 +2872,10 @@ exports[`<Tab /> un selected selected tab should match snapshot when disabled, w
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={true}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -3042,7 +3058,7 @@ exports[`<Tab /> un selected selected tab should match snapshot when disabled, w
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should match snapshot when valid icon name is passed 1`] = `
+exports[`<Tab /> unselected tab should match snapshot when valid icon name is passed 1`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -3054,9 +3070,10 @@ exports[`<Tab /> un selected selected tab should match snapshot when valid icon 
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {
@@ -3239,7 +3256,7 @@ exports[`<Tab /> un selected selected tab should match snapshot when valid icon 
 </View>
 `;
 
-exports[`<Tab /> un selected selected tab should render tab when active 1`] = `
+exports[`<Tab /> unselected tab should render tab when is not active 1`] = `
 <View
   collapsable={true}
   pointerEvents="box-none"
@@ -3251,9 +3268,10 @@ exports[`<Tab /> un selected selected tab should render tab when active 1`] = `
 >
   <TouchableOpacity
     activeOpacity={1}
-    backgroundColor="transparent"
     className="sc-AykKC ewdLUh"
     disabled={false}
+    isActive={false}
+    isPressed={false}
     style={
       Array [
         Object {

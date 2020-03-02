@@ -4,22 +4,26 @@ import { fireEvent, act } from '@testing-library/react-native';
 import Tab from '../Tab';
 
 describe('<Tab />', () => {
-  describe('un selected selected tab', () => {
-    test('should render tab when active', () => {
-      const { container, getAllByText } = renderWithTheme(<Tab label="Active state" />);
+  describe('unselected tab', () => {
+    test('should render tab when is not active', () => {
+      const { container, getAllByText } = renderWithTheme(
+        <Tab label="Active state" isActive={false} />,
+      );
       expect(container).toMatchSnapshot();
       const label = getAllByText('Active state');
       expect(label).toBeTruthy();
     });
 
     test('should match snapshot when valid icon name is passed', () => {
-      const { container } = renderWithTheme(<Tab label="Active state" icon="info" />);
+      const { container } = renderWithTheme(
+        <Tab label="Active state" icon="info" isActive={false} />,
+      );
       expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot when disabled, with icon present', () => {
       const { container } = renderWithTheme(
-        <Tab label="Active state" icon="info" disabled={true} />,
+        <Tab label="Active state" icon="info" disabled={true} isActive={false} />,
       );
       expect(container).toMatchSnapshot();
     });
@@ -28,6 +32,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
+          isActive={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -46,6 +51,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
+          isActive={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -64,6 +70,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
+          isActive={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
