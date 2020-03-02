@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableOpacity } from 'react-native';
 import styled, { ThemeContext } from 'styled-components/native';
@@ -69,7 +69,7 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
 
   const theme = useContext(ThemeContext);
 
-  const onPressIn = () => {
+  const onPressIn = useCallback(() => {
     if (isActive) {
       setLabelColor('primary.900');
       setTabBackground(getColor(theme, 'primary.200'));
@@ -77,15 +77,16 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
     }
     setLabelColor('shade.970');
     setTabBackground(getColor(theme, 'tone.940'));
-  };
+  }, [isActive, theme]);
 
-  const onPressOut = () => {
+  const onPressOut = useCallback(() => {
     const color = getLabelColor({ isActive, disabled });
     setLabelColor(color);
     setTabBackground('transparent');
-  };
+  }, [disabled, isActive]);
 
   const isValidIcon = icons[icon];
+
   return (
     <Flex flex={1} justifyContent="center">
       <StyledTabButton

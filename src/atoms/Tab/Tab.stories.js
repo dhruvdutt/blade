@@ -1,16 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-ondevice-knobs';
 import Tab from './Tab';
 import Flex from '../Flex';
 import View from '../View';
 
 storiesOf('Tabs', module)
-  .addDecorator(withKnobs)
   .addParameters({
     component: Tab,
   })
-  .add('show tabs', () => (
+  .add('default', () => (
     <View>
       <Flex flexDirection="row">
         <View>
@@ -33,4 +31,12 @@ storiesOf('Tabs', module)
         </View>
       </Flex>
     </View>
+  ))
+  .add('with Tabs Container', () => (
+    <Flex flexDirection="row">
+      <View>
+        <Tab isActive={true} label="Selected with icon" icon="info" />
+        <Tab isActive={false} label="Unselected with icon" icon="info" />
+      </View>
+    </Flex>
   ));
