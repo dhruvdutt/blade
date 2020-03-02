@@ -1,7 +1,7 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { View, TouchableOpacity } from 'react-native';
-import styled, { ThemeContext } from 'styled-components/native';
+import styled from 'styled-components/native';
 import Flex from '../Flex';
 import Text from '../Text';
 import { getColor } from '../../_helpers/theme';
@@ -21,7 +21,7 @@ const styles = {
     borderBottomColor({ isActive, theme, disabled }) {
       if (disabled) {
         if (isActive) {
-          return getColor(theme, 'primary.300');
+          return getColor(theme, 'primary.930');
         }
       }
       if (isActive) {
@@ -32,17 +32,38 @@ const styles = {
     margin() {
       return [0, 0, 0, 0.5];
     },
+    color({ isActive, disabled, isPressed }) {
+      if (isPressed) {
+        if (isActive) {
+          return 'primary.900';
+        }
+        return 'shade.970';
+      } else if (isActive) {
+        return disabled ? 'primary.700' : 'primary.800';
+      } else {
+        return disabled ? 'shade.940' : 'shade.960';
+      }
+    },
+  },
+  tab: {
+    backgroundColor({ theme, isActive, isPressed }) {
+      if (isPressed) {
+        if (isActive) {
+          return getColor(theme, 'primary.920');
+        }
+        return getColor(theme, 'tone.940');
+      }
+      return 'transparent';
+    },
   },
 };
 
-const StyledTabButton = styled(TouchableOpacity)(
-  (props) => `
-min-width: 48px;
-background-color: ${props.backgroundColor};
-border-top-left-radius: 2px;
-border-top-right-radius: 2px;
-`,
-);
+const StyledTabButton = styled(TouchableOpacity)`
+  min-width: 48px;
+  background-color: ${styles.tab.backgroundColor};
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+`;
 
 const Label = styled(View)`
   padding: 8px 0px;
@@ -50,42 +71,20 @@ const Label = styled(View)`
   border-bottom-color: ${styles.label.borderBottomColor};
 `;
 
-const getLabelColor = ({ isActive, disabled }) => {
-  let color = 'shade.960';
-
-  if (isActive) {
-    color = disabled ? 'primary.700' : 'primary.800';
-  } else {
-    color = disabled ? 'shade.940' : 'shade.960';
-  }
-  return color;
-};
-
 const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
-  const initialLabelColor = getLabelColor({ isActive, disabled });
+  const [isPressed, setTabPressed] = useState(false);
 
-  const [tabBackground, setTabBackground] = useState('transparent');
-  const [labelColor, setLabelColor] = useState(initialLabelColor);
+  const onPressIn = () => {
+    setTabPressed(true);
+  };
 
-  const theme = useContext(ThemeContext);
-
-  const onPressIn = useCallback(() => {
-    if (isActive) {
-      setLabelColor('primary.900');
-      setTabBackground(getColor(theme, 'primary.200'));
-      return;
-    }
-    setLabelColor('shade.970');
-    setTabBackground(getColor(theme, 'tone.940'));
-  }, [isActive, theme]);
-
-  const onPressOut = useCallback(() => {
-    const color = getLabelColor({ isActive, disabled });
-    setLabelColor(color);
-    setTabBackground('transparent');
-  }, [disabled, isActive]);
+  const onPressOut = () => {
+    setTabPressed(false);
+  };
 
   const isValidIcon = icons[icon];
+
+  const labelColor = styles.label.color({ isActive, disabled, isPressed });
 
   return (
     <Flex flex={1} justifyContent="center">
@@ -95,7 +94,8 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
         onPress={onPress}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
-        backgroundColor={tabBackground}
+        isPressed={isPressed}
+        isActive={isActive}
         {...automation(testID)}
       >
         <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
@@ -120,7 +120,7 @@ Tab.propTypes = {
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(Object.keys(icons)),
   testID: PropTypes.string,
 };
 
