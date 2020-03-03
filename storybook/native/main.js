@@ -6,6 +6,7 @@ import { darkTheme, lightTheme } from '../../src/tokens/theme';
 import './rn-addons';
 import AsyncStorage from '@react-native-community/async-storage';
 import storybookTheme from './storybookTheme';
+import { withKnobs } from '@storybook/addon-ondevice-knobs';
 
 const theme = {
   light: lightTheme,
@@ -18,12 +19,15 @@ configure(() => {
   require('../../src/atoms/Link/Link.stories');
   require('../../src/atoms/Icon/Icon.stories');
   require('../../src/atoms/Button/Button.stories');
+  require('../../src/atoms/Checkbox/Checkbox.stories');
   require('../../src/atoms/Tab/Tab.stories');
 }, module);
 
 // add decorators
 const SpaceAround = styled.View`
-  margin: 20px;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
 `;
 
 addDecorator((Story) => (
@@ -31,6 +35,8 @@ addDecorator((Story) => (
     <Story />
   </SpaceAround>
 ));
+
+addDecorator(withKnobs);
 
 const SafeAreaWrapper = styled.SafeAreaView`
   flex: 1;
