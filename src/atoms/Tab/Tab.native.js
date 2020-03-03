@@ -4,10 +4,9 @@ import { View, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import Flex from '../Flex';
 import Text from '../Text';
-import { getColor } from '../../_helpers/theme';
+import { getColor, getIconKeys } from '../../_helpers/theme';
 import Icon from '../Icon';
 import Space from '../Space';
-import icons from '../../icons';
 import automation from '../../_helpers/automation-attributes';
 import isEmpty from '../../_helpers/isEmpty';
 
@@ -119,7 +118,7 @@ Tab.propTypes = {
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
-  icon: PropTypes.oneOf(Object.keys(icons)),
+  icon: PropTypes.oneOf(getIconKeys()),
   testID: PropTypes.string,
 };
 

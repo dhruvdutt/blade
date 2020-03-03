@@ -1,5 +1,6 @@
 import { spacings } from '../tokens';
 import theme from '../tokens/theme';
+import icons from '../icons';
 
 const makePxValue = (value) => {
   const values = [].concat(value);
@@ -43,6 +44,14 @@ const getLineHeight = (currentTheme, textSize) => {
   }
 };
 
-export { getLineHeight };
+const getIconKeys = () => Object.keys(icons);
 
-export { makePxValue, getColorKey, getColorKeys, getColor, getVariantColorKeys };
+export {
+  getLineHeight,
+  makePxValue,
+  getColorKey,
+  getColorKeys,
+  getColor,
+  getVariantColorKeys,
+  getIconKeys,
+};
