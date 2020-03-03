@@ -9,6 +9,7 @@ import Icon from '../Icon';
 import Space from '../Space';
 import icons from '../../icons';
 import automation from '../../_helpers/automation-attributes';
+import isEmpty from '../../_helpers/isEmpty';
 
 const styles = {
   label: {
@@ -82,8 +83,6 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
     setTabPressed(false);
   }, []);
 
-  const isValidIcon = icons[icon];
-
   const labelColor = styles.label.color({ isActive, disabled, isPressed });
 
   return (
@@ -100,7 +99,7 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
       >
         <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
           <Label isActive={isActive} disabled={disabled}>
-            {isValidIcon && <Icon name={icon} fill={labelColor} size="small" />}
+            {!isEmpty(icon) && <Icon name={icon} fill={labelColor} size="small" />}
             <Space margin={styles.label.margin()}>
               <View>
                 <Text color={labelColor} disabled={disabled} numberOfLines={1} size="medium">

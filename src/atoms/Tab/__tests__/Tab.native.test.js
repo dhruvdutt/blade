@@ -3,6 +3,9 @@ import { renderWithTheme } from '../../../_helpers/testing';
 import { fireEvent, act } from '@testing-library/react-native';
 import Tab from '../Tab';
 
+beforeAll(() => jest.spyOn(console, 'error').mockImplementation());
+afterAll(() => jest.restoreAllMocks());
+
 describe('<Tab />', () => {
   describe('unselected tab', () => {
     test('should render tab when is not active', () => {
@@ -110,6 +113,17 @@ describe('<Tab />', () => {
         <Tab label="Active state" icon="info" disabled={true} isActive={true} />,
       );
       expect(container).toMatchSnapshot();
+    });
+
+    test('should throw error when invalid icon name is passed', () => {
+      // const { container } = renderWithTheme(
+      //   <Tab label="Active state" icon="invalidIcon" disabled={true} isActive={true} />,
+      // );
+      expect(() =>
+        renderWithTheme(
+          <Tab label="Active state" icon="invalidIcon" disabled={true} isActive={true} />,
+        ),
+      ).toThrowError();
     });
 
     test('should call onPress method when press event is fired on tab', () => {
