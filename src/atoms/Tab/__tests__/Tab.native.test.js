@@ -116,9 +116,6 @@ describe('<Tab />', () => {
     });
 
     test('should throw error when invalid icon name is passed', () => {
-      // const { container } = renderWithTheme(
-      //   <Tab label="Active state" icon="invalidIcon" disabled={true} isActive={true} />,
-      // );
       expect(() =>
         renderWithTheme(
           <Tab label="Active state" icon="invalidIcon" disabled={true} isActive={true} />,
