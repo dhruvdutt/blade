@@ -37,6 +37,8 @@ exports[`<Tab /> selected selected tab should call onPress method when press eve
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -235,6 +237,8 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -433,6 +437,8 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -631,6 +637,8 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -829,6 +837,8 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1027,6 +1037,8 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1225,6 +1237,8 @@ exports[`<Tab /> selected selected tab should match snapshot when disabled, with
           Object {
             "borderBottomColor": "rgba(11, 112, 231, 0.10)",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1423,6 +1437,8 @@ exports[`<Tab /> selected selected tab should match snapshot when valid icon nam
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1621,6 +1637,8 @@ exports[`<Tab /> selected selected tab should render tab when active 1`] = `
           Object {
             "borderBottomColor": "rgba(43, 131, 234, 1.0 )",
             "borderBottomWidth": 1,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1709,6 +1727,8 @@ exports[`<Tab /> unselected tab should call onPress method when press event is f
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -1907,6 +1927,8 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -2105,6 +2127,8 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -2303,6 +2327,8 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -2501,6 +2527,8 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -2699,6 +2727,8 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -2897,6 +2927,8 @@ exports[`<Tab /> unselected tab should match snapshot when disabled, with icon p
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -3095,6 +3127,8 @@ exports[`<Tab /> unselected tab should match snapshot when valid icon name is pa
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,
@@ -3293,6 +3327,8 @@ exports[`<Tab /> unselected tab should render tab when is not active 1`] = `
           Object {
             "borderBottomColor": "transparent",
             "borderBottomWidth": 0,
+          },
+          Object {
             "paddingBottom": 8,
             "paddingLeft": 0,
             "paddingRight": 0,

@@ -32,6 +32,9 @@ const styles = {
     margin() {
       return [0, 0, 0, 0.5];
     },
+    padding() {
+      return [1, 0, 1, 0];
+    },
     color({ isActive, disabled, isPressed }) {
       if (isPressed) {
         if (isActive) {
@@ -66,7 +69,6 @@ const StyledTabButton = styled(TouchableOpacity)`
 `;
 
 const Label = styled(View)`
-  padding: 8px 0px;
   border-bottom-width: ${styles.label.borderBottomWidth};
   border-bottom-color: ${styles.label.borderBottomColor};
 `;
@@ -97,16 +99,18 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
         {...automation(testID)}
       >
         <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
-          <Label isActive={isActive} disabled={disabled}>
-            {!isEmpty(icon) && <Icon name={icon} fill={labelColor} size="small" />}
-            <Space margin={styles.label.margin()}>
-              <View>
-                <Text color={labelColor} disabled={disabled} numberOfLines={1} size="medium">
-                  {label}
-                </Text>
-              </View>
-            </Space>
-          </Label>
+          <Space padding={styles.label.padding()}>
+            <Label isActive={isActive} disabled={disabled}>
+              {!isEmpty(icon) && <Icon name={icon} fill={labelColor} size="small" />}
+              <Space margin={styles.label.margin()}>
+                <View>
+                  <Text color={labelColor} disabled={disabled} numberOfLines={1} size="medium">
+                    {label}
+                  </Text>
+                </View>
+              </Space>
+            </Label>
+          </Space>
         </Flex>
       </StyledTabButton>
     </Flex>
@@ -126,6 +130,7 @@ Tab.defaultProps = {
   isActive: false,
   onPress: () => {},
   disabled: false,
+  icon: undefined,
   testID: 'ds-tab',
 };
 
