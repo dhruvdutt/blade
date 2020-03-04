@@ -21,6 +21,7 @@ configure(() => {
   require('../../src/atoms/Button/Button.stories');
   require('../../src/atoms/Checkbox/Checkbox.stories');
   require('../../src/atoms/Tab/Tab.stories');
+  require('../../src/atoms/ScrollView/ScrollView.stories');
 }, module);
 
 // add decorators
