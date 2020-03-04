@@ -4,7 +4,7 @@ import { View, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import Flex from '../Flex';
 import Text from '../Text';
-import { getColor, getIconKeys } from '../../_helpers/theme';
+import { getColor, getIconKeys, makePxValue } from '../../_helpers/theme';
 import Icon from '../Icon';
 import Space from '../Space';
 import automation from '../../_helpers/automation-attributes';
@@ -62,7 +62,7 @@ const styles = {
 };
 
 const StyledTabButton = styled(TouchableOpacity)`
-  min-width: 48px;
+  min-width: ${makePxValue(6)};
   background-color: ${styles.tab.backgroundColor};
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
