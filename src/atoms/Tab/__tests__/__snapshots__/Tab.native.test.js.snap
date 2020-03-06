@@ -11,11 +11,11 @@ exports[`<Tab /> selected selected tab should call onPress method when press eve
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -29,9 +29,9 @@ exports[`<Tab /> selected selected tab should call onPress method when press eve
     testID="test-active-tab"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -211,11 +211,11 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -229,9 +229,9 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
     testID="test-active-tab-press-in"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -411,11 +411,11 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={true}
+    pressed={true}
     style={
       Array [
         Object {
@@ -429,9 +429,9 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
     testID="test-active-tab-press-in"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -611,11 +611,11 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -629,9 +629,9 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
     testID="test-active-tab-press-in"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -811,11 +811,11 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -829,9 +829,9 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
     testID="test-active-tab-press-in"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -1011,11 +1011,11 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1029,9 +1029,9 @@ exports[`<Tab /> selected selected tab should match snapshot for user taps on ta
     testID="test-active-tab-press-in"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -1211,11 +1211,11 @@ exports[`<Tab /> selected selected tab should match snapshot when disabled, with
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={true}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1229,9 +1229,9 @@ exports[`<Tab /> selected selected tab should match snapshot when disabled, with
     testID="ds-tab"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={true}
-      isActive={true}
       style={
         Array [
           Object {
@@ -1411,11 +1411,11 @@ exports[`<Tab /> selected selected tab should match snapshot when valid icon nam
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1429,9 +1429,9 @@ exports[`<Tab /> selected selected tab should match snapshot when valid icon nam
     testID="ds-tab"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -1611,11 +1611,11 @@ exports[`<Tab /> selected selected tab should render tab when active 1`] = `
   }
 >
   <TouchableOpacity
+    active={true}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={true}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1629,9 +1629,9 @@ exports[`<Tab /> selected selected tab should render tab when active 1`] = `
     testID="ds-tab"
   >
     <View
+      active={true}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={true}
       style={
         Array [
           Object {
@@ -1701,11 +1701,11 @@ exports[`<Tab /> unselected tab should call onPress method when press event is f
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1719,9 +1719,9 @@ exports[`<Tab /> unselected tab should call onPress method when press event is f
     testID="test-active-tab"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -1901,11 +1901,11 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -1919,9 +1919,9 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
     testID="test-active-tab-press-in"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -2101,11 +2101,11 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={true}
+    pressed={true}
     style={
       Array [
         Object {
@@ -2119,9 +2119,9 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
     testID="test-active-tab-press-in"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -2301,11 +2301,11 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -2319,9 +2319,9 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
     testID="test-active-tab-press-in"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -2501,11 +2501,11 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -2519,9 +2519,9 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
     testID="test-active-tab-press-in"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -2701,11 +2701,11 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -2719,9 +2719,9 @@ exports[`<Tab /> unselected tab should match snapshot for user taps on tab butto
     testID="test-active-tab-press-in"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -2901,11 +2901,11 @@ exports[`<Tab /> unselected tab should match snapshot when disabled, with icon p
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={true}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -2919,9 +2919,9 @@ exports[`<Tab /> unselected tab should match snapshot when disabled, with icon p
     testID="ds-tab"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={true}
-      isActive={false}
       style={
         Array [
           Object {
@@ -3101,11 +3101,11 @@ exports[`<Tab /> unselected tab should match snapshot when valid icon name is pa
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -3119,9 +3119,9 @@ exports[`<Tab /> unselected tab should match snapshot when valid icon name is pa
     testID="ds-tab"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {
@@ -3301,11 +3301,11 @@ exports[`<Tab /> unselected tab should render tab when is not active 1`] = `
   }
 >
   <TouchableOpacity
+    active={false}
     activeOpacity={1}
     className="sc-AykKC ewdLUh"
     disabled={false}
-    isActive={false}
-    isPressed={false}
+    pressed={false}
     style={
       Array [
         Object {
@@ -3319,9 +3319,9 @@ exports[`<Tab /> unselected tab should render tab when is not active 1`] = `
     testID="ds-tab"
   >
     <View
+      active={false}
       className="sc-AykKC lkAQjX"
       disabled={false}
-      isActive={false}
       style={
         Array [
           Object {

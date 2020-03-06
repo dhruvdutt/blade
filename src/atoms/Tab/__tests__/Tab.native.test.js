@@ -10,7 +10,7 @@ describe('<Tab />', () => {
   describe('unselected tab', () => {
     test('should render tab when is not active', () => {
       const { container, getAllByText } = renderWithTheme(
-        <Tab label="Active state" isActive={false} />,
+        <Tab label="Active state" active={false} />,
       );
       expect(container).toMatchSnapshot();
       const label = getAllByText('Active state');
@@ -19,14 +19,14 @@ describe('<Tab />', () => {
 
     test('should match snapshot when valid icon name is passed', () => {
       const { container } = renderWithTheme(
-        <Tab label="Active state" icon="info" isActive={false} />,
+        <Tab label="Active state" icon="info" active={false} />,
       );
       expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot when disabled, with icon present', () => {
       const { container } = renderWithTheme(
-        <Tab label="Active state" icon="info" disabled={true} isActive={false} />,
+        <Tab label="Active state" icon="info" disabled={true} active={false} />,
       );
       expect(container).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={false}
+          active={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -54,7 +54,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={false}
+          active={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -73,7 +73,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={false}
+          active={false}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -94,7 +94,7 @@ describe('<Tab />', () => {
   describe('selected selected tab', () => {
     test('should render tab when active', () => {
       const { container, getAllByText } = renderWithTheme(
-        <Tab label="Active state" isActive={true} />,
+        <Tab label="Active state" active={true} />,
       );
       expect(container).toMatchSnapshot();
       const label = getAllByText('Active state');
@@ -102,15 +102,13 @@ describe('<Tab />', () => {
     });
 
     test('should match snapshot when valid icon name is passed', () => {
-      const { container } = renderWithTheme(
-        <Tab label="Active state" icon="info" isActive={true} />,
-      );
+      const { container } = renderWithTheme(<Tab label="Active state" icon="info" active={true} />);
       expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot when disabled, with icon present', () => {
       const { container } = renderWithTheme(
-        <Tab label="Active state" icon="info" disabled={true} isActive={true} />,
+        <Tab label="Active state" icon="info" disabled={true} active={true} />,
       );
       expect(container).toMatchSnapshot();
     });
@@ -118,7 +116,7 @@ describe('<Tab />', () => {
     test('should throw error when invalid icon name is passed', () => {
       expect(() =>
         renderWithTheme(
-          <Tab label="Active state" icon="invalidIcon" disabled={true} isActive={true} />,
+          <Tab label="Active state" icon="invalidIcon" disabled={true} active={true} />,
         ),
       ).toThrowError();
     });
@@ -127,7 +125,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={true}
+          active={true}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -146,7 +144,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={true}
+          active={true}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
@@ -165,7 +163,7 @@ describe('<Tab />', () => {
       const onPressMockCallback = jest.fn();
       const { container, getByTestId } = renderWithTheme(
         <Tab
-          isActive={true}
+          active={true}
           label="Active state"
           icon="info"
           onPress={onPressMockCallback}
