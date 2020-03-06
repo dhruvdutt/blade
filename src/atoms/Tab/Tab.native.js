@@ -12,19 +12,19 @@ import isEmpty from '../../_helpers/isEmpty';
 
 const styles = {
   label: {
-    borderBottomWidth({ isActive }) {
-      if (isActive) {
+    borderBottomWidth({ active }) {
+      if (active) {
         return '1px';
       }
       return '0px';
     },
-    borderBottomColor({ isActive, theme, disabled }) {
+    borderBottomColor({ active, theme, disabled }) {
       if (disabled) {
-        if (isActive) {
+        if (active) {
           return getColor(theme, 'primary.930');
         }
       }
-      if (isActive) {
+      if (active) {
         return getColor(theme, 'primary.800');
       }
       return 'transparent';
@@ -35,13 +35,13 @@ const styles = {
     padding() {
       return [1, 0, 1, 0];
     },
-    color({ isActive, disabled, isPressed }) {
-      if (isPressed) {
-        if (isActive) {
+    color({ active, disabled, pressed }) {
+      if (pressed) {
+        if (active) {
           return 'primary.900';
         }
         return 'shade.970';
-      } else if (isActive) {
+      } else if (active) {
         return disabled ? 'primary.700' : 'primary.800';
       } else {
         return disabled ? 'shade.940' : 'shade.960';
@@ -49,9 +49,9 @@ const styles = {
     },
   },
   tab: {
-    backgroundColor({ theme, isActive, isPressed }) {
-      if (isPressed) {
-        if (isActive) {
+    backgroundColor({ theme, active, pressed }) {
+      if (pressed) {
+        if (active) {
           return getColor(theme, 'primary.920');
         }
         return getColor(theme, 'tone.940');
@@ -64,8 +64,8 @@ const styles = {
 const StyledTabButton = styled(TouchableOpacity)`
   min-width: ${makePxValue(6)};
   background-color: ${styles.tab.backgroundColor};
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: ${(props) => props.theme.spacings.xxsmall};
+  border-top-right-radius: ${(props) => props.theme.spacings.xxsmall};
 `;
 
 const Label = styled(View)`
@@ -73,18 +73,18 @@ const Label = styled(View)`
   border-bottom-color: ${styles.label.borderBottomColor};
 `;
 
-const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
-  const [isPressed, setTabPressed] = useState(false);
+const Tab = ({ label, active, icon, onPress, disabled, testID }) => {
+  const [pressed, setPressed] = useState(false);
 
   const onPressIn = useCallback(() => {
-    setTabPressed(true);
+    setPressed(true);
   }, []);
 
   const onPressOut = useCallback(() => {
-    setTabPressed(false);
+    setPressed(false);
   }, []);
 
-  const labelColor = styles.label.color({ isActive, disabled, isPressed });
+  const labelColor = styles.label.color({ active, disabled, pressed });
 
   return (
     <Flex flex={1} justifyContent="center">
@@ -94,13 +94,13 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
         onPress={onPress}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
-        isPressed={isPressed}
-        isActive={isActive}
+        pressed={pressed}
+        active={active}
         {...automation(testID)}
       >
         <Flex alignItems="center" alignSelf="center" flexDirection="row" flexWrap="wrap">
           <Space padding={styles.label.padding()}>
-            <Label isActive={isActive} disabled={disabled}>
+            <Label active={active} disabled={disabled}>
               {!isEmpty(icon) && <Icon name={icon} fill={labelColor} size="small" />}
               <Space margin={styles.label.margin()}>
                 <View>
@@ -118,7 +118,7 @@ const Tab = ({ label, isActive, icon, onPress, disabled, testID }) => {
 };
 
 Tab.propTypes = {
-  isActive: PropTypes.bool,
+  active: PropTypes.bool,
   onPress: PropTypes.func,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
@@ -127,7 +127,7 @@ Tab.propTypes = {
 };
 
 Tab.defaultProps = {
-  isActive: false,
+  active: false,
   onPress: () => {},
   disabled: false,
   icon: undefined,

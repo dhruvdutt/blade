@@ -12,22 +12,22 @@ storiesOf('Tabs', module)
     <View>
       <Flex flexDirection="row">
         <View>
-          <Tab isActive={true} label="Selected with icon" icon="info" />
+          <Tab active={true} label="Selected with icon" icon="info" />
         </View>
       </Flex>
       <Flex flexDirection="row">
         <View>
-          <Tab isActive={false} label="Unselected with icon" icon="info" />
+          <Tab active={false} label="Unselected with icon" icon="info" />
         </View>
       </Flex>
       <Flex flexDirection="row">
         <View>
-          <Tab isActive={false} disabled={true} label="Unselected with disabled" />
+          <Tab active={false} disabled={true} label="Unselected with disabled" />
         </View>
       </Flex>
       <Flex flexDirection="row">
         <View>
-          <Tab isActive={true} disabled={true} label="Selected with disabled" />
+          <Tab active={true} disabled={true} label="Selected with disabled" />
         </View>
       </Flex>
     </View>
@@ -35,8 +35,8 @@ storiesOf('Tabs', module)
   .add('with Tabs Container', () => (
     <Flex flexDirection="row">
       <View>
-        <Tab isActive={true} label="Selected with icon" icon="info" />
-        <Tab isActive={false} label="Unselected with icon" icon="info" />
+        <Tab active={true} label="Selected with icon" icon="info" />
+        <Tab active={false} label="Unselected with icon" icon="info" />
       </View>
     </Flex>
   ));
